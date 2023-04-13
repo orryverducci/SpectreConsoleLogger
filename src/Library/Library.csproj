@@ -6,6 +6,7 @@
     <RootNamespace>SpectreConsoleLogger</RootNamespace>
     <AssemblyName>SpectreConsoleLogger</AssemblyName>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <IsTrimmable>true</IsTrimmable>
     <Title>Spectre.Console Logger</Title>
     <Authors>Orry Verducci</Authors>
     <Description>Console logger provider using Spectre.Console for Microsoft.Extensions.Logging.</Description>
