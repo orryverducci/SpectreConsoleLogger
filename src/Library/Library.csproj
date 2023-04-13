@@ -13,6 +13,7 @@
     <PackageTags>logging; console; Spectre.Console</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/orryverducci/SpectreConsoleLogger/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/orryverducci/SpectreConsoleLogger/</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
