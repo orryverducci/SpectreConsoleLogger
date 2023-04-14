@@ -6,6 +6,7 @@
     <RootNamespace>SpectreConsoleLogger</RootNamespace>
     <AssemblyName>SpectreConsoleLogger</AssemblyName>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <DebugType>embedded</DebugType>
     <IsTrimmable>true</IsTrimmable>
     <Title>Spectre.Console Logger</Title>
     <Authors>Orry Verducci</Authors>
