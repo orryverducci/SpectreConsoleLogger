@@ -14,7 +14,7 @@ internal class DemoService : IHostedService
     /// <summary>
     /// The timer which logs a test message every 2 seconds.
     /// </summary>
-    private System.Timers.Timer _timer;
+    private System.Timers.Timer _timer = new System.Timers.Timer(2000);
 
     /// <summary>
     /// Initialises a new instance of the <see cref="DemoService"/> class.
@@ -25,7 +25,6 @@ internal class DemoService : IHostedService
     /// <inheritdoc/>
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _timer = new System.Timers.Timer(2000);
         _timer.Elapsed += LogMessage;
         _timer.AutoReset = true;
         _timer.Enabled = true;
