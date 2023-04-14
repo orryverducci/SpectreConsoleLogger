@@ -18,7 +18,8 @@ public class SpectreConsoleLoggerProvider : ILoggerProvider
     private readonly ConcurrentDictionary<string, SpectreConsoleLogger> _loggers = new();
 
     /// <inheritdoc/>
-    public ILogger CreateLogger(string categoryName) => _loggers.GetOrAdd(categoryName, new SpectreConsoleLogger(categoryName, Style));
+    public ILogger CreateLogger(string categoryName)
+        => _loggers.GetOrAdd(categoryName, new SpectreConsoleLogger(categoryName, Style));
 
     /// <summary>
     /// Releases all resources used by the <see cref="SpectreConsoleLoggerProvider"/> object.

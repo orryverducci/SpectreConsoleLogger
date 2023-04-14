@@ -87,12 +87,17 @@ public class SpectreConsoleLogger : ILogger
         // Add the rows to the table containing the information
         if (_style == Style.Extended)
         {
-            table.AddRow($"[grey]{DateTime.Now.ToString("HH:mm:ss zzz")}[/]", $"[[[bold {levelColour}{levelBackground}]{levelText.PadRight(5)}[/]]]", $"[bold]{_categoryName.EscapeMarkup()}:[/]");
+            table.AddRow($"[grey]{DateTime.Now.ToString("HH:mm:ss zzz")}[/]",
+                $"[[[bold {levelColour}{levelBackground}]{levelText.PadRight(5)}[/]]]",
+                $"[bold]{_categoryName.EscapeMarkup()}:[/]");
+
             table.AddRow(string.Empty, string.Empty, formatter(state, exception).EscapeMarkup());
         }
         else
         {
-            table.AddRow($"[grey]{DateTime.Now.ToString("HH:mm:ss zzz")}[/]", $"[[[bold {levelColour}{levelBackground}]{levelText.PadRight(5)}[/]]]", formatter(state, exception).EscapeMarkup());
+            table.AddRow($"[grey]{DateTime.Now.ToString("HH:mm:ss zzz")}[/]",
+                $"[[[bold {levelColour}{levelBackground}]{levelText.PadRight(5)}[/]]]",
+                formatter(state, exception).EscapeMarkup());
         }
 
         if (exception != null)
