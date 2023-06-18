@@ -1,4 +1,4 @@
-﻿namespace SpectreConsoleLogger;
+namespace SpectreConsoleLogger;
 
 public static class LoggingBuilderExtensions
 {

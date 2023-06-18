@@ -1,4 +1,4 @@
-﻿namespace SpectreConsoleLogger;
+namespace SpectreConsoleLogger;
 
 /// <summary>
 /// Provides a dummy scope to use with a logger that doesn't support scopes.

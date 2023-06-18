@@ -1,4 +1,4 @@
-﻿namespace SpectreConsoleLogger;
+namespace SpectreConsoleLogger;
 
 public enum Style
 {

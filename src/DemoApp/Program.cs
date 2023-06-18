@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace SpectreConsoleLogger.DemoApp;
 
 internal class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         IHost host = Host.CreateDefaultBuilder(args)
             .ConfigureLogging((hostContext, builder) =>

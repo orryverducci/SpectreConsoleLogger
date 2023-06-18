@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
 
 namespace SpectreConsoleLogger.DemoApp;
@@ -14,7 +14,7 @@ internal class DemoService : IHostedService
     /// <summary>
     /// The timer which logs a test message every 2 seconds.
     /// </summary>
-    private System.Timers.Timer _timer = new System.Timers.Timer(2000);
+    private readonly System.Timers.Timer _timer = new(2000);
 
     /// <summary>
     /// Initialises a new instance of the <see cref="DemoService"/> class.
