@@ -2,6 +2,11 @@
 Release Notes
 =============
 
+1.0.2
+-----
+
+* **IMPROVED:** Added EditorConfig
+
 1.0.1
 -----
 
