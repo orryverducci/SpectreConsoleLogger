@@ -7,6 +7,7 @@ Release Notes
 * **IMPROVED:** Added EditorConfig
 * **IMPROVED:** Added configuration for Visual Studio Code
 * **IMPROVED:** Updated Spectre.Console to 0.47.0
+* **IMPROVED:** Modernised demo application
 
 1.0.1
 -----

@@ -2,21 +2,18 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace SpectreConsoleLogger.DemoApp;
 
-internal class Program
+internal static class Program
 {
     public static void Main(string[] args)
     {
-        IHost host = Host.CreateDefaultBuilder(args)
-            .ConfigureLogging((hostContext, builder) =>
-            {
-                builder.ClearProviders().AddSpectreConsole(Style.Extended);
-            })
-            .ConfigureServices((hostContext, services) =>
-            {
-                services.AddHostedService<DemoService>();
-            })
-            .Build();
+        HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
-        host.Run();
+        builder.Logging.ClearProviders().AddSpectreConsole(Style.Extended);
+
+        builder.Services.AddHostedService<DemoService>();
+
+        IHost app = builder.Build();
+
+        app.Run();
     }
 }
