@@ -6,6 +6,7 @@ Release Notes
 -----
 
 * **IMPROVED:** Added EditorConfig
+* **IMPROVED:** Added configuration for Visual Studio Code
 
 1.0.1
 -----

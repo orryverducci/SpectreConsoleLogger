@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "SpectreConsoleLogger.sln",
+    "files.insertFinalNewline": true
+}
