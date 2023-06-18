@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-If you�ve found or suspect a security vulnerability in this application, please let us know so we can address and fix it.
+If you’ve found or suspect a security vulnerability in this application, please let us know so we can address and fix it.
 
 Please report any vulnerabilities you discover in the application via the [online vulnerability reporting form](https://github.com/orryverducci/SpectreConsoleLogger/security/advisories/new), including:
 
