@@ -8,7 +8,7 @@ internal static class Program
     {
         HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
-        builder.Logging.ClearProviders().AddSpectreConsole(Style.Extended);
+        builder.Logging.ClearProviders().AddSpectreConsole(Style.Extended).SetMinimumLevel(LogLevel.Trace);
 
         builder.Services.AddHostedService<DemoService>();
 

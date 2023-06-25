@@ -9,6 +9,7 @@ Release Notes
 * **NEW:** Added GitHub Actions workflows
 * **IMPROVED:** Updated Spectre.Console to 0.47.0
 * **IMPROVED:** Modernised demo application
+* **IMPROVED:** Show all log levels in demo application
 * **CHANGED:** Stopped automatic packaging on build
 * **CHANGED:** Show timezone only on extended logging style
 
