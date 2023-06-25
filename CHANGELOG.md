@@ -10,6 +10,7 @@ Release Notes
 * **IMPROVED:** Updated Spectre.Console to 0.47.0
 * **IMPROVED:** Modernised demo application
 * **CHANGED:** Stopped automatic packaging on build
+* **CHANGED:** Show timezone only on extended logging style
 
 1.0.1
 -----
