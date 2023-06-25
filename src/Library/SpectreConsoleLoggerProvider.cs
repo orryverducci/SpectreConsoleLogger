@@ -12,9 +12,6 @@ public class SpectreConsoleLoggerProvider : ILoggerProvider
     /// </summary>
     public Style Style { get; set; } = Style.Standard;
 
-    /// <summary>
-    /// The directory of loggers for each category.
-    /// </summary>
     private readonly ConcurrentDictionary<string, SpectreConsoleLogger> _loggers = new();
 
     /// <inheritdoc/>

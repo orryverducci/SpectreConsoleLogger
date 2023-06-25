@@ -6,14 +6,8 @@ namespace SpectreConsoleLogger.DemoApp;
 
 internal class DemoService : IHostedService
 {
-    /// <summary>
-    /// The logger.
-    /// </summary>
     private readonly ILogger _logger;
 
-    /// <summary>
-    /// The timer which logs a test message every 2 seconds.
-    /// </summary>
     private readonly System.Timers.Timer _timer = new(2000);
 
     /// <summary>

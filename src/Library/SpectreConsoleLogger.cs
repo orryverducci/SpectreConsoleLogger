@@ -5,14 +5,8 @@ namespace SpectreConsoleLogger;
 /// </summary>
 public class SpectreConsoleLogger : ILogger
 {
-    /// <summary>
-    /// The name of the category the logger is for.
-    /// </summary>
     private readonly string _categoryName;
 
-    /// <summary>
-    /// The logging style that should bse used by the logger.
-    /// </summary>
     private readonly Style _style;
 
     /// <summary>
