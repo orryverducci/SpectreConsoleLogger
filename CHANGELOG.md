@@ -8,6 +8,7 @@ Release Notes
 * **NEW:** Added configuration for Visual Studio Code
 * **IMPROVED:** Updated Spectre.Console to 0.47.0
 * **IMPROVED:** Modernised demo application
+* **CHANGED:** Stopped automatic packaging on build
 
 1.0.1
 -----

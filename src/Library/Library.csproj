@@ -5,7 +5,6 @@
     <Nullable>enable</Nullable>
     <RootNamespace>SpectreConsoleLogger</RootNamespace>
     <AssemblyName>SpectreConsoleLogger</AssemblyName>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <DebugType>embedded</DebugType>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
