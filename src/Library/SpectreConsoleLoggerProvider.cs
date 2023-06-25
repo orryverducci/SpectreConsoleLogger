@@ -7,12 +7,12 @@ namespace SpectreConsoleLogger;
 /// </summary>
 public class SpectreConsoleLoggerProvider : ILoggerProvider
 {
+    private readonly ConcurrentDictionary<string, SpectreConsoleLogger> _loggers = new();
+
     /// <summary>
     /// Determines the logging style that should be used by the loggers.
     /// </summary>
     public Style Style { get; set; } = Style.Standard;
-
-    private readonly ConcurrentDictionary<string, SpectreConsoleLogger> _loggers = new();
 
     /// <inheritdoc/>
     public ILogger CreateLogger(string categoryName)
