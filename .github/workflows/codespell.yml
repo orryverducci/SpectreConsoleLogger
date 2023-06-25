@@ -1,0 +1,26 @@
+#
+# Checks for any common spelling errors
+#
+
+name: Spelling Check
+
+on: [push, pull_request]
+
+jobs:
+  dotnet-format:
+    name: Spelling Check
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install codespell
+        run: pip install codespell
+
+      - name: Add codespell problem matcher
+        uses: codespell-project/codespell-problem-matcher@v1
+
+      - name: Run codespell
+        run: codespell

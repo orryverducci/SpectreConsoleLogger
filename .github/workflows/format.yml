@@ -1,0 +1,42 @@
+#
+# Checks the formatting of the code using dotnet-format
+#
+
+name: Formatting Check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/format.yml'
+      - 'src/**'
+  pull_request:
+    paths:
+      - '.github/workflows/format.yml'
+      - 'src/**'
+
+jobs:
+  dotnet-format:
+    name: Formatting Check
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Install dotnet-format
+        run: dotnet tool install -g dotnet-format
+
+      - name: Add dotnet-format problem matcher
+        uses: renanrcp/dotnet-format-problem-matcher@v.1.3.2
+
+      - name: Run dotnet-format on the library project
+        run: dotnet format src/Library/Library.csproj --verify-no-changes
+
+      - name: Run dotnet-format on the demo app project
+        run: dotnet format src/DemoApp/DemoApp.csproj --verify-no-changes

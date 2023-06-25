@@ -1,0 +1,81 @@
+#
+# Builds the application and uploads artifacts
+#
+
+name: Build Application
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'src/**'
+  pull_request:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'src/**'
+
+jobs:
+  library-build:
+    name: Library Build
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
+    
+    permissions:
+      actions: read
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Build library
+        run: "dotnet pack src/Library/Library.csproj --configuration Release"
+
+      - name: Upload artifact
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v3
+        with:
+          name: library
+          path: src/Library/bin/Release/*
+          if-no-files-found: error
+  
+  app-build:
+    name: Demo App Build
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
+    
+    permissions:
+      actions: read
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Build demo app
+        run: "dotnet build src/DemoApp/DemoApp.csproj --configuration Release"
+
+      - name: Upload artifact
+        if: github.ref_name == 'main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v3
+        with:
+          name: demoapp
+          path: src/DemoApp/bin/Release/net6.0
+          if-no-files-found: error
+

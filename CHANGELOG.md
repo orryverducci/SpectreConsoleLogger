@@ -6,6 +6,7 @@ Release Notes
 
 * **NEW:** Added EditorConfig
 * **NEW:** Added configuration for Visual Studio Code
+* **NEW:** Added GitHub Actions workflows
 * **IMPROVED:** Updated Spectre.Console to 0.47.0
 * **IMPROVED:** Modernised demo application
 * **CHANGED:** Stopped automatic packaging on build
