@@ -19,7 +19,7 @@ public class SpectreConsoleLogger : ILogger
     /// Initialises a new instance of the <see cref="SpectreConsoleLogger"/> class.
     /// </summary>
     /// <param name="categoryName">The name of the category the logger is for.</param>
-    /// <param name="style">The logging style that should bse used by the logger.</param>
+    /// <param name="style">The logging style that should be used by the logger.</param>
     public SpectreConsoleLogger(string categoryName, Style style)
     {
         _categoryName = categoryName;
