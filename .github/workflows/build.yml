@@ -76,6 +76,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: demoapp
-          path: src/DemoApp/bin/Release/net6.0
+          path: src/DemoApp/bin/Release/net8.0
           if-no-files-found: error
 
