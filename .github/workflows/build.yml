@@ -41,7 +41,7 @@ jobs:
 
       - name: Upload artifact
         if: github.ref_name == 'main' && github.event_name == 'push'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: library
           path: src/Library/bin/Release/*
@@ -73,7 +73,7 @@ jobs:
 
       - name: Upload artifact
         if: github.ref_name == 'main' && github.event_name == 'push'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: demoapp
           path: src/DemoApp/bin/Release/net8.0
