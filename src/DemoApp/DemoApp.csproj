@@ -6,7 +6,6 @@
     <Nullable>enable</Nullable>
     <RootNamespace>SpectreConsoleLogger.DemoApp</RootNamespace>
     <PublishTrimmed>true</PublishTrimmed>
-    <TrimmerDefaultAction>link</TrimmerDefaultAction>
   </PropertyGroup>
 
   <ItemGroup>
