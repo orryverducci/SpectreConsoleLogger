@@ -1,3 +1,5 @@
+using Microsoft.Extensions.DependencyInjection;
+
 namespace SpectreConsoleLogger;
 
 public static class LoggingBuilderExtensions
@@ -9,8 +11,14 @@ public static class LoggingBuilderExtensions
     /// <param name="style">The logging style that should be used.</param>
     /// <returns>The logging builder with <see cref="SpectreConsoleLoggerProvider"/> added to the factory.</returns>
     public static ILoggingBuilder AddSpectreConsole(this ILoggingBuilder loggingBuilder, Style style = Style.Standard)
-        => loggingBuilder.AddProvider(new SpectreConsoleLoggerProvider()
+    {
+        ILoggerProvider loggerProvider = new SpectreConsoleLoggerProvider()
         {
             Style = style
-        });
+        };
+
+        loggingBuilder.Services.AddSingleton(loggerProvider);
+
+        return loggingBuilder;
+    }
 }
