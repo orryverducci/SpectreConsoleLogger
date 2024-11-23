@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+1.0.3
+-----
+
+* **IMPROVED:** Updated Spectre.Console to 0.49.1
+
 1.0.2
 -----
 
