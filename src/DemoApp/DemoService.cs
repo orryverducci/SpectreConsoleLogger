@@ -63,7 +63,14 @@ internal class DemoService : IHostedService
                 _logger.LogError(LogMessageText);
                 break;
             case 5:
-                _logger.LogCritical(LogMessageText);
+                try
+                {
+                    throw new Exception("Something went wrong");
+                }
+                catch (Exception exception)
+                {
+                    _logger.LogCritical(exception, LogMessageText);
+                }
                 break;
         }
 
