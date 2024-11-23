@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>SpectreConsoleLogger.DemoApp</RootNamespace>
     <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>

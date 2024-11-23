@@ -9,7 +9,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <IsTrimmable>true</IsTrimmable>
+    <IsAotCompatible>true</IsAotCompatible>
     <Title>Spectre.Console Logger</Title>
     <Authors>Orry Verducci</Authors>
     <Description>Console logger provider using Spectre.Console for Microsoft.Extensions.Logging.</Description>
