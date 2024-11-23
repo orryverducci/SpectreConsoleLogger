@@ -5,6 +5,7 @@ Release Notes
 -----
 
 * **IMPROVED:** Updated Spectre.Console to 0.49.1
+* **CHANGED:** Minimum .NET version is now .NET 8
 
 1.0.2
 -----
