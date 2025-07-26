@@ -95,8 +95,7 @@ public class SpectreConsoleLogger : ILogger
 
         if (exception != null)
         {
-            ExceptionFormats exceptionFormat = ExceptionFormats.ShortenPaths | ExceptionFormats.ShortenTypes | ExceptionFormats.ShortenMethods;
-            table.AddRow(new Text(string.Empty), new Text(string.Empty), exception.GetRenderable(exceptionFormat));
+            table.AddRow(new Text(string.Empty), new Text(string.Empty), new Text(exception.ToString()));
         }
 
         // Render the outer table to the console

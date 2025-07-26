@@ -7,6 +7,7 @@ Release Notes
 * **NEW:** Support for AOT compilation
 * **IMPROVED:** Updated Spectre.Console to 0.50.0
 * **CHANGED:** Minimum .NET version is now .NET 8
+* **CHANGED:** Exceptions are now logged as plain text to avoid issues with AOT compilation.
 
 1.0.2
 -----
