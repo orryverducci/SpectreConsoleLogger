@@ -1,8 +1,8 @@
 Release Notes
 =============
 
-1.0.3
------
+1.1
+---
 
 * **NEW:** Support for AOT compilation
 * **IMPROVED:** Updated Spectre.Console to 0.50.0
