@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+1.2
+---
+
+* **IMPROVED:** Updated Spectre.Console to 0.57.2
+* **CHANGED:** Minimum .NET version is now .NET 10
+
 1.1
 ---
 
